@@ -43,7 +43,7 @@ func (e *env) Load(env string) {
 		envFile = ""
 	}
 
-	err := godotenv.Load(string(rootPath) + `.env.` + envFile)
+	err := godotenv.Load(string(rootPath) + `/.env.` + envFile)
 	if err != nil {
 		logrus.WithFields(logrus.Fields{
 			"cause": err,
